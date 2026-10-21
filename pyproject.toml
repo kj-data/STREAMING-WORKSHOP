@@ -1,0 +1,26 @@
+[project]
+name = "streaming-workshop"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "kj-data", email = "jaureguikelly22@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "kafka-python>=3.0.11",
+    "pandas>=3.0.6",
+    "pyarrow>=26.0.0",
+]
+
+[project.scripts]
+streaming-workshop = "streaming_workshop:main"
+
+[build-system]
+requires = ["uv_build>=0.13.4,<0.14.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "jupyter>=1.1.1",
+]
